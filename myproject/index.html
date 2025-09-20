@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LuxeLiving - Modern Furniture Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <header
+    class="navbar navbar-expand-lg navbar-light bg-light px-4 py-3 d-flex justify-content-between align-items-center">
+    <h1 class="h3 mb-0">LuxeLiving</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#home">FurnitureStore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#home"><i class="bi bi-house-door-fill me-1"></i>Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#products"><i class="bi bi-box-seam me-1"></i>Products</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-info-circle-fill me-1"></i>About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-envelope-fill me-1"></i>Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="signin.html" title="Sign in">
+                <i class="bi bi-person-plus-fill nav-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html" title="Log in">
+                <i class="bi bi-box-arrow-in-right nav-icon"></i>
+              </a>
+            </li>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      </div>
+    </div>
+
+    </div>
+    <div class="cart-icon" id="cart-icon" title="View Cart">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count" id="cart-count">0</span>
+    </div>
+  </header>
+
+  <section id="featured" class="mb-5">
+    <h2 class="mb-4">Featured Products</h2>
+    <div class="row g-4" id="featured-products">
+      <!-- Featured products will be injected here by JS -->
+    </div>
+  </section>
+
+  <main class="container my-5">
+    <section id="products" class="row g-4">
+    </section>
+  </main>
+
+
+  <div id="product-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close-modal" id="close-product-modal">&times;</span>
+      <img id="modal-image" src="" alt="" class="img-fluid rounded mb-3" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-price" class="fw-bold"></p>
+      <p id="modal-description"></p>
+      <div class="d-flex align-items-center mb-3">
+        <button class="btn btn-outline-secondary quantity-btn" id="quantity-minus">-</button>
+        <input type="number" id="quantity" value="1" min="1" class="form-control text-center mx-2"
+          style="width: 60px;" />
+        <button class="btn btn-outline-secondary quantity-btn" id="quantity-plus">+</button>
+      </div>
+      <button class="btn btn-primary" id="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="cart-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close-modal" id="close-cart-modal">&times;</span>
+      <h2>Your Shopping Cart</h2>
+      <div id="cart-items" class="mb-3">
+        <p id="empty-cart" class="text-center text-muted"><i class="fas fa-shopping-cart fa-2x mb-2"></i><br>Your cart
+          is empty</p>
+      </div>
+      <h4 id="cart-total">Total: $0.00</h4>
+      <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-secondary" id="continue-shopping">Continue Shopping</button>
+        <button class="btn btn-success" id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <section id="about" class="my-5">
+          </section>
+          <h3>LuxeLiving</h3>
+          <p>Creating beautiful spaces since 2010. We believe everyone deserves to live in a home they love.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <section id="contact" class="my-5">
+          </section>
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Furniture City</p>
+          <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> info@luxeliving.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 LuxeLiving. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="firebase.js"></script>
+</body>
+
+</html>
